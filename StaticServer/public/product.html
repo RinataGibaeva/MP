@@ -1,0 +1,42 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ввод товара</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script language="javascript" type="text/javascript"
+                src="http://code.jquery.com/jquery-2.1.1.min.js">
+        </script>
+        <script language="javascript" type="text/javascript"
+                src="js/product.js">
+        </script>
+        <script src="lib/carhartl-jquery-cookie-92b7715/jquery.cookie.js"></script>
+    </head>
+    <body onload="getAllProducts()">
+        <div class="header">
+            <table class="infoinfo">
+                <th><a href="login.html" class="logo"><img src="css/img/logo2.png"></a></th>
+                <th><a href="login.html" class="info"><img src="css/img/kontakt.png"></a></th>
+            </table>
+        </div>
+        <div class="caption"><h1>Введите данные нового товара</h1></div>
+        <div class="new_product_form" align="center">
+            <input type="text" id="product_name" placeholder="Название">
+            <br>
+            <input type="text" id="price" placeholder="Цена">
+            <br>
+            <input type="text" id="photo_url" placeholder="URL-фотографии">
+            <br>
+            <button id="submit" onclick="
+            sendProductData(document.getElementById('product_name').value,
+                        document.getElementById('price').value, document.getElementById('photo_url').value)">
+                Отправить
+            </button>
+        </div>
+
+        <table id="product_book_table" class="product_table">
+            <th>Наименование</th>
+            <th>Стоимость</th>
+            <th>Фото</th>
+        </table>
+    </body>
+</html>

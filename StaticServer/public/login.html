@@ -1,0 +1,31 @@
+<link>
+    <meta charset="UTF-8">
+    <title>Авторизация</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script language="javascript" type="text/javascript"
+            src="http://code.jquery.com/jquery-2.1.1.min.js">
+    </script>
+    <script language="javascript" type="text/javascript"
+            src="js/login.js">
+    </script>
+</head>
+<body>
+    <div class="header">
+        <table class="infoinfo">
+            <th><a href="login.html" class="logo"><img src="css/img/logo2.png"></a></th>
+            <th><a href="login.html" class="info"><img src="css/img/kontakt.png"></a></th>
+        </table>
+    </div>
+    <div class="caption"><h1>Введите данные для входа</h1></div>
+    <div class="registration_form" align="center">
+        <input type="text" id="login" placeholder="Логин">
+        <br>
+        <input type="text" id="password" placeholder="Пароль">
+        <br>
+        <button id="submit" onclick="
+        login(document.getElementById('login').value,
+              document.getElementById('password').value)">
+            Отправить
+        </button>
+    </div>
+</body>
